@@ -1,0 +1,40 @@
+﻿<Window x:Class="AirConditionerController.Pages.WelcomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:attach="clr-namespace:Utilities.AttachProp" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:AirConditionerController.Pages"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="https://github.com/canton7/Stylet"
+        Title="Launch"
+        Width="auto" Height="auto"
+        d:DataContext="{d:DesignInstance local:WelcomeViewModel}"
+        Background="White" SizeToContent="WidthAndHeight"
+        mc:Ignorable="d">
+    <Border>
+        <Grid>
+            <Image Height="600" Source="/Image/bg_launch.png" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0"
+                       VerticalAlignment="Center"
+                       Width="160"
+                       Source="/Image/welcome_logo.png" />
+
+                <Button Grid.Row="1"
+                        VerticalAlignment="Center"
+                        Width="250"
+                        Command="{s:Action Launch}"
+                        Style="{StaticResource ButtonEnterStyle}" />
+
+                <Image Grid.Row="2"
+                       VerticalAlignment="Center"
+                       Width="150"
+                       Source="/Image/edu_logo.png" />
+            </Grid>
+
+
+        </Grid>
+    </Border>
+</Window>
