@@ -214,6 +214,16 @@ namespace AirConditionerController.Pages
                         }
                     }
 
+                    if(string.IsNullOrEmpty(CurrentTemp) || string.IsNullOrEmpty(UpperLimit) || string.IsNullOrEmpty(LowerLimit) || string.IsNullOrEmpty(LowerLimit))
+                    {
+                        UpperLimit = "";
+                        LowerLimit = "";
+                        CurrentTemp = "";
+                        Alarm = "";
+                        IsOpen = false;
+                        goto START;
+                    }
+
                     var currentTemp = int.Parse(CurrentTemp);
                     var upperLimit = int.Parse(UpperLimit);
                     var lowerLimit = int.Parse(LowerLimit);
